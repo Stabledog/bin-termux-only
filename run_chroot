@@ -1,0 +1,14 @@
+# run_chroot.sh 
+# vim: filetype=sh :
+
+# Run termux-chroot
+
+if [[ -z $InTermuxChroot ]]; then
+    export InTermuxChroot=true
+    echo "Entering termux-chroot"
+    termux-chroot
+else
+    echo "termux-chroot session already."
+    false
+fi
+
